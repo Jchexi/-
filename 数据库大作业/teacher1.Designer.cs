@@ -46,12 +46,12 @@
             this.btnSelect = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnInsert = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.gvescore = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvescore)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -83,7 +83,7 @@
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.dataGridView1);
+            this.splitContainer1.Panel2.Controls.Add(this.gvescore);
             this.splitContainer1.Size = new System.Drawing.Size(985, 482);
             this.splitContainer1.SplitterDistance = 143;
             this.splitContainer1.TabIndex = 0;
@@ -96,6 +96,7 @@
             this.btnStatistic.TabIndex = 16;
             this.btnStatistic.Text = "统计";
             this.btnStatistic.UseVisualStyleBackColor = true;
+            this.btnStatistic.Click += new System.EventHandler(this.btnStatistic_Click);
             // 
             // txtGradedrop
             // 
@@ -158,9 +159,9 @@
             this.CourseNo.AutoSize = true;
             this.CourseNo.Location = new System.Drawing.Point(571, 13);
             this.CourseNo.Name = "CourseNo";
-            this.CourseNo.Size = new System.Drawing.Size(52, 15);
+            this.CourseNo.Size = new System.Drawing.Size(53, 15);
             this.CourseNo.TabIndex = 8;
-            this.CourseNo.Text = "课程号";
+            this.CourseNo.Text = "课程ID";
             // 
             // txtSname
             // 
@@ -186,6 +187,7 @@
             this.btnUpdate.TabIndex = 5;
             this.btnUpdate.Text = "修改";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // txtSno
             // 
@@ -197,11 +199,11 @@
             // StudentNo
             // 
             this.StudentNo.AutoSize = true;
-            this.StudentNo.Location = new System.Drawing.Point(12, 9);
+            this.StudentNo.Location = new System.Drawing.Point(0, 12);
             this.StudentNo.Name = "StudentNo";
-            this.StudentNo.Size = new System.Drawing.Size(37, 15);
+            this.StudentNo.Size = new System.Drawing.Size(53, 15);
             this.StudentNo.TabIndex = 3;
-            this.StudentNo.Text = "学号";
+            this.StudentNo.Text = "学生ID";
             // 
             // btnSelect
             // 
@@ -211,6 +213,7 @@
             this.btnSelect.TabIndex = 2;
             this.btnSelect.Text = "查询";
             this.btnSelect.UseVisualStyleBackColor = true;
+            this.btnSelect.Click += new System.EventHandler(this.btnSelect_Click);
             // 
             // btnDelete
             // 
@@ -220,6 +223,7 @@
             this.btnDelete.TabIndex = 1;
             this.btnDelete.Text = "删除";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnInsert
             // 
@@ -229,17 +233,18 @@
             this.btnInsert.TabIndex = 0;
             this.btnInsert.Text = "录入";
             this.btnInsert.UseVisualStyleBackColor = true;
+            this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
             // 
-            // dataGridView1
+            // gvescore
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 27;
-            this.dataGridView1.Size = new System.Drawing.Size(985, 335);
-            this.dataGridView1.TabIndex = 0;
+            this.gvescore.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gvescore.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gvescore.Location = new System.Drawing.Point(0, 0);
+            this.gvescore.Name = "gvescore";
+            this.gvescore.RowHeadersWidth = 51;
+            this.gvescore.RowTemplate.Height = 27;
+            this.gvescore.Size = new System.Drawing.Size(985, 335);
+            this.gvescore.TabIndex = 0;
             // 
             // teacher1
             // 
@@ -249,14 +254,15 @@
             this.ClientSize = new System.Drawing.Size(985, 482);
             this.Controls.Add(this.splitContainer1);
             this.Name = "teacher1";
-            this.Text = "学生成绩录入";
+            this.Text = "3";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.teacher1_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvescore)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -281,6 +287,6 @@
         private System.Windows.Forms.Button btnSelect;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnInsert;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView gvescore;
     }
 }
