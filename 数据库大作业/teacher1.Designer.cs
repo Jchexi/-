@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(teacher1));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.btnStatistic = new System.Windows.Forms.Button();
             this.txtGradedrop = new System.Windows.Forms.TextBox();
@@ -256,8 +257,9 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(985, 482);
             this.Controls.Add(this.splitContainer1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "teacher1";
-            this.Text = "3";
+            this.Text = "学生成绩录入";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.teacher1_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);

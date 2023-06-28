@@ -21,7 +21,7 @@ namespace 数据库大作业
 
         private void teacher2_Load(object sender, EventArgs e)
         {
-
+            InitScore();
         }
         public void InitScore()
         {
@@ -45,6 +45,11 @@ namespace 数据库大作业
                 da.Fill(ds);
                 gvescore.DataSource = ds.Tables[0].DefaultView;
             }
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
