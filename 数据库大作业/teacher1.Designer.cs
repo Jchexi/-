@@ -32,7 +32,7 @@
             this.btnStatistic = new System.Windows.Forms.Button();
             this.txtGradedrop = new System.Windows.Forms.TextBox();
             this.txtCno = new System.Windows.Forms.TextBox();
-            this.txtGrade = new System.Windows.Forms.TextBox();
+            this.txtMark = new System.Windows.Forms.TextBox();
             this.txtCname = new System.Windows.Forms.TextBox();
             this.GradeDrop = new System.Windows.Forms.Label();
             this.Grade = new System.Windows.Forms.Label();
@@ -66,7 +66,7 @@
             this.splitContainer1.Panel1.Controls.Add(this.btnStatistic);
             this.splitContainer1.Panel1.Controls.Add(this.txtGradedrop);
             this.splitContainer1.Panel1.Controls.Add(this.txtCno);
-            this.splitContainer1.Panel1.Controls.Add(this.txtGrade);
+            this.splitContainer1.Panel1.Controls.Add(this.txtMark);
             this.splitContainer1.Panel1.Controls.Add(this.txtCname);
             this.splitContainer1.Panel1.Controls.Add(this.GradeDrop);
             this.splitContainer1.Panel1.Controls.Add(this.Grade);
@@ -112,13 +112,13 @@
             this.txtCno.Size = new System.Drawing.Size(139, 25);
             this.txtCno.TabIndex = 14;
             // 
-            // txtGrade
+            // txtMark
             // 
-            this.txtGrade.Location = new System.Drawing.Point(315, 52);
-            this.txtGrade.Name = "txtGrade";
-            this.txtGrade.Size = new System.Drawing.Size(144, 25);
-            this.txtGrade.TabIndex = 13;
-            this.txtGrade.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.txtMark.Location = new System.Drawing.Point(315, 52);
+            this.txtMark.Name = "txtMark";
+            this.txtMark.Size = new System.Drawing.Size(144, 25);
+            this.txtMark.TabIndex = 13;
+            this.txtMark.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // txtCname
             // 
@@ -276,7 +276,7 @@
         private System.Windows.Forms.Button btnStatistic;
         private System.Windows.Forms.TextBox txtGradedrop;
         private System.Windows.Forms.TextBox txtCno;
-        private System.Windows.Forms.TextBox txtGrade;
+        private System.Windows.Forms.TextBox txtMark;
         private System.Windows.Forms.TextBox txtCname;
         private System.Windows.Forms.Label GradeDrop;
         private System.Windows.Forms.Label Grade;

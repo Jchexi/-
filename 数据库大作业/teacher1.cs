@@ -46,7 +46,7 @@ namespace 数据库大作业
                 if (con.State == ConnectionState.Open)
                 {
                     string strCmd = "insert 成绩表 values({0},'{1}',{2},'{3}','{4}','{5}')";
-                    strCmd = string.Format(strCmd, txtSno.Text, txtSname.Text,txtCno.Text, txtCname.Text,txtGrade.Text, txtGradedrop.Text);
+                    strCmd = string.Format(strCmd, txtSno.Text, txtSname.Text,txtCno.Text, txtCname.Text,txtMark.Text, txtGradedrop.Text);
                     SqlCommand command = new SqlCommand(strCmd, con);
                     command.ExecuteNonQuery();
                     InitScore();
@@ -97,7 +97,7 @@ namespace 数据库大作业
                 if (con.State == ConnectionState.Open)
                 {
                     string strCmd = "update 成绩表 set 学生ID={0},学生姓名='{1}',课程ID={2},课程名='{3}',成绩='{4}',绩点='{5}'";
-                    strCmd = string.Format(strCmd, txtSno.Text, txtSname.Text, txtCno.Text, txtCname.Text, txtGrade.Text,txtGradedrop.Text ,学生ID);
+                    strCmd = string.Format(strCmd, txtSno.Text, txtSname.Text, txtCno.Text, txtCname.Text, txtMark.Text,txtGradedrop.Text ,学生ID);
 
                     SqlCommand command = new SqlCommand(strCmd, con);
                     command.ExecuteNonQuery();
