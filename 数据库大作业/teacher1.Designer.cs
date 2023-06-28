@@ -237,8 +237,11 @@
             // 
             // gvescore
             // 
+            this.gvescore.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.gvescore.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gvescore.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gvescore.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gvescore.Location = new System.Drawing.Point(0, 0);
             this.gvescore.Name = "gvescore";
             this.gvescore.RowHeadersWidth = 51;

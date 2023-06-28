@@ -25,7 +25,7 @@ namespace 数据库大作业
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string strCon = @"server=test;database=stum2;Integrated security=true";
+            string strCon = @"server=test;database=score_managerment;Integrated security=true";
             SqlConnection con = new SqlConnection();
             con.ConnectionString = strCon;
             con.Open();
@@ -58,7 +58,7 @@ namespace 数据库大作业
 
         private void button3_Click(object sender, EventArgs e)
         {
-            string strCon1 = @"server=test;database=stum1;Integrated security=true";
+            string strCon1 = @"server=test;database=score_managerment;Integrated security=true";
             SqlConnection con1 = new SqlConnection();
             con1.ConnectionString = strCon1;
             con1.Open();
