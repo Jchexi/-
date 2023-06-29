@@ -44,9 +44,10 @@
             this.label1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label1.Location = new System.Drawing.Point(129, 40);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 15);
+            this.label1.Size = new System.Drawing.Size(65, 18);
             this.label1.TabIndex = 0;
             this.label1.Text = "用户名";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -54,7 +55,7 @@
             this.label2.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label2.Location = new System.Drawing.Point(129, 103);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(39, 15);
+            this.label2.Size = new System.Drawing.Size(46, 18);
             this.label2.TabIndex = 1;
             this.label2.Text = "密码";
             // 
@@ -62,7 +63,7 @@
             // 
             this.txtusername.Location = new System.Drawing.Point(225, 40);
             this.txtusername.Name = "txtusername";
-            this.txtusername.Size = new System.Drawing.Size(198, 25);
+            this.txtusername.Size = new System.Drawing.Size(198, 28);
             this.txtusername.TabIndex = 2;
             // 
             // txtpwd
@@ -70,7 +71,7 @@
             this.txtpwd.Location = new System.Drawing.Point(225, 93);
             this.txtpwd.Name = "txtpwd";
             this.txtpwd.PasswordChar = '*';
-            this.txtpwd.Size = new System.Drawing.Size(198, 25);
+            this.txtpwd.Size = new System.Drawing.Size(198, 28);
             this.txtpwd.TabIndex = 3;
             // 
             // button1
@@ -108,7 +109,7 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(577, 260);

@@ -40,6 +40,7 @@ namespace 数据库大作业
                 dr.Read();
                 if(dr.HasRows)
                 {
+                    AppConfig.UserName = txtusername.Text.Trim();
                     //隐藏登录窗口
                     this.Hide();
                     //把主窗口显示出来
@@ -54,6 +55,7 @@ namespace 数据库大作业
             {
                 MessageBox.Show("用户名或者密码不正确");
             }
+            
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -73,6 +75,7 @@ namespace 数据库大作业
                 dr.Read();
                 if (dr.HasRows)
                 {
+                    AppConfig.UserName = txtusername.Text.Trim();
                     //隐藏登录窗口
                     this.Hide();
                     //把主窗口显示出来
@@ -87,6 +90,11 @@ namespace 数据库大作业
             {
                 MessageBox.Show("用户名或者密码不正确");
             }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
