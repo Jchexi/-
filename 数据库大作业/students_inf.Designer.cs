@@ -41,13 +41,15 @@
             this.label5 = new System.Windows.Forms.Label();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.txtUserName = new System.Windows.Forms.ToolStripStatusLabel();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(202, 101);
+            this.textBox1.Location = new System.Drawing.Point(202, 75);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(172, 28);
             this.textBox1.TabIndex = 0;
@@ -55,7 +57,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(202, 201);
+            this.textBox2.Location = new System.Drawing.Point(202, 170);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(172, 28);
             this.textBox2.TabIndex = 0;
@@ -63,14 +65,14 @@
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(202, 299);
+            this.textBox4.Location = new System.Drawing.Point(202, 260);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(172, 28);
             this.textBox4.TabIndex = 0;
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(202, 404);
+            this.textBox5.Location = new System.Drawing.Point(202, 444);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(172, 28);
             this.textBox5.TabIndex = 0;
@@ -89,7 +91,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("宋体", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.Location = new System.Drawing.Point(54, 101);
+            this.label1.Location = new System.Drawing.Point(54, 75);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(100, 28);
             this.label1.TabIndex = 2;
@@ -100,7 +102,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("宋体", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label2.Location = new System.Drawing.Point(35, 201);
+            this.label2.Location = new System.Drawing.Point(35, 170);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(128, 28);
             this.label2.TabIndex = 2;
@@ -111,7 +113,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("宋体", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label3.Location = new System.Drawing.Point(54, 249);
+            this.label3.Location = new System.Drawing.Point(54, 218);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(0, 28);
             this.label3.TabIndex = 2;
@@ -121,7 +123,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("宋体", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label4.Location = new System.Drawing.Point(54, 299);
+            this.label4.Location = new System.Drawing.Point(54, 260);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(70, 28);
             this.label4.TabIndex = 2;
@@ -132,7 +134,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("宋体", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label5.Location = new System.Drawing.Point(54, 397);
+            this.label5.Location = new System.Drawing.Point(54, 437);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(70, 28);
             this.label5.TabIndex = 2;
@@ -157,12 +159,31 @@
             this.txtUserName.Size = new System.Drawing.Size(123, 24);
             this.txtUserName.Text = "txtUserName";
             // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(202, 349);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(172, 28);
+            this.textBox3.TabIndex = 4;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("宋体", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label6.Location = new System.Drawing.Point(54, 349);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(70, 28);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "专业";
+            // 
             // students_inf
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(985, 596);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.textBox3);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -200,5 +221,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel txtUserName;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label6;
     }
 }

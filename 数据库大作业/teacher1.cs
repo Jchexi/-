@@ -108,12 +108,34 @@ namespace 数据库大作业
 
         private void btnStatistic_Click(object sender, EventArgs e)
         {
+            using (SqlConnection con = new SqlConnection(strCon))
+            {
+                string 学生ID = gvescore.CurrentRow.Cells["学生ID"].Value.ToString();
+                con.Open();
+                if (con.State == ConnectionState.Open)
+                {
+                    string strCmd = "select * from 成绩表 where 成绩<60 order by 学生ID ";
+                    //strCmd = string.Format(strCmd, txtSno.Text, txtSname.Text, txtCno.Text, txtCname.Text, txtMark.Text, txtGradedrop.Text, 学生ID);
 
+                    SqlCommand command = new SqlCommand(strCmd, con);
+                    command.ExecuteNonQuery();
+                    SqlDataAdapter da = new SqlDataAdapter(strCmd, con);
+                    DataSet ds = new DataSet();
+                    da.Fill(ds);
+                    gvescore.DataSource = ds.Tables[0].DefaultView;
+                    // InitScore();
+                }
+            }
         }
 
         private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            InitScore();
         }
     }
 }

@@ -41,9 +41,9 @@ namespace 数据库大作业
                 SqlDataReader dr = command.ExecuteReader();
                 if (dr.Read())
                 {
-                    textBox2.Text = dr[1].ToString();
-                    //textBox3.Text = dr[2].ToString();
+                    textBox2.Text = dr[1].ToString();                  
                     textBox4.Text = dr[2].ToString();
+                    textBox3.Text = dr[4].ToString();
                     textBox5.Text = dr[3].ToString();
                 }
                 else

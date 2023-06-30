@@ -48,6 +48,7 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnInsert = new System.Windows.Forms.Button();
             this.gvescore = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -65,6 +66,7 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.button1);
             this.splitContainer1.Panel1.Controls.Add(this.btnStatistic);
             this.splitContainer1.Panel1.Controls.Add(this.txtGradedrop);
             this.splitContainer1.Panel1.Controls.Add(this.txtCno);
@@ -273,8 +275,19 @@
             this.gvescore.Name = "gvescore";
             this.gvescore.RowHeadersWidth = 51;
             this.gvescore.RowTemplate.Height = 27;
-            this.gvescore.Size = new System.Drawing.Size(1108, 402);
+            this.gvescore.Size = new System.Drawing.Size(1108, 401);
             this.gvescore.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button1.Location = new System.Drawing.Point(927, 44);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(156, 40);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "刷新";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // teacher1
             // 
@@ -320,5 +333,6 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnInsert;
         private System.Windows.Forms.DataGridView gvescore;
+        private System.Windows.Forms.Button button1;
     }
 }
