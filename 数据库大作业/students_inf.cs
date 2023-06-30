@@ -42,9 +42,9 @@ namespace 数据库大作业
                 if (dr.Read())
                 {
                     textBox2.Text = dr[1].ToString();
-                    textBox3.Text = dr[2].ToString();
-                    textBox4.Text = dr[3].ToString();
-                    textBox5.Text = dr[4].ToString();
+                    //textBox3.Text = dr[2].ToString();
+                    textBox4.Text = dr[2].ToString();
+                    textBox5.Text = dr[3].ToString();
                 }
                 else
                     MessageBox.Show("找不到信息", "提示");
