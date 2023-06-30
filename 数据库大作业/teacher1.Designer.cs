@@ -59,6 +59,7 @@
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.splitContainer1.Name = "splitContainer1";
             this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -81,20 +82,23 @@
             this.splitContainer1.Panel1.Controls.Add(this.btnSelect);
             this.splitContainer1.Panel1.Controls.Add(this.btnDelete);
             this.splitContainer1.Panel1.Controls.Add(this.btnInsert);
+            this.splitContainer1.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel1_Paint);
             // 
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.gvescore);
-            this.splitContainer1.Size = new System.Drawing.Size(985, 482);
-            this.splitContainer1.SplitterDistance = 143;
+            this.splitContainer1.Size = new System.Drawing.Size(1108, 578);
+            this.splitContainer1.SplitterDistance = 171;
+            this.splitContainer1.SplitterWidth = 5;
             this.splitContainer1.TabIndex = 0;
             // 
             // btnStatistic
             // 
             this.btnStatistic.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnStatistic.Location = new System.Drawing.Point(824, 110);
+            this.btnStatistic.Location = new System.Drawing.Point(927, 132);
+            this.btnStatistic.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnStatistic.Name = "btnStatistic";
-            this.btnStatistic.Size = new System.Drawing.Size(139, 33);
+            this.btnStatistic.Size = new System.Drawing.Size(156, 40);
             this.btnStatistic.TabIndex = 16;
             this.btnStatistic.Text = "统计";
             this.btnStatistic.UseVisualStyleBackColor = true;
@@ -102,40 +106,44 @@
             // 
             // txtGradedrop
             // 
-            this.txtGradedrop.Location = new System.Drawing.Point(643, 49);
+            this.txtGradedrop.Location = new System.Drawing.Point(723, 59);
+            this.txtGradedrop.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtGradedrop.Name = "txtGradedrop";
-            this.txtGradedrop.Size = new System.Drawing.Size(139, 25);
+            this.txtGradedrop.Size = new System.Drawing.Size(156, 28);
             this.txtGradedrop.TabIndex = 15;
             // 
             // txtCno
             // 
-            this.txtCno.Location = new System.Drawing.Point(643, 5);
+            this.txtCno.Location = new System.Drawing.Point(723, 6);
+            this.txtCno.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCno.Name = "txtCno";
-            this.txtCno.Size = new System.Drawing.Size(139, 25);
+            this.txtCno.Size = new System.Drawing.Size(156, 28);
             this.txtCno.TabIndex = 14;
             // 
             // txtMark
             // 
-            this.txtMark.Location = new System.Drawing.Point(315, 52);
+            this.txtMark.Location = new System.Drawing.Point(354, 62);
+            this.txtMark.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMark.Name = "txtMark";
-            this.txtMark.Size = new System.Drawing.Size(144, 25);
+            this.txtMark.Size = new System.Drawing.Size(162, 28);
             this.txtMark.TabIndex = 13;
             this.txtMark.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // txtCname
             // 
-            this.txtCname.Location = new System.Drawing.Point(61, 49);
+            this.txtCname.Location = new System.Drawing.Point(69, 59);
+            this.txtCname.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCname.Name = "txtCname";
-            this.txtCname.Size = new System.Drawing.Size(155, 25);
+            this.txtCname.Size = new System.Drawing.Size(174, 28);
             this.txtCname.TabIndex = 12;
             // 
             // GradeDrop
             // 
             this.GradeDrop.AutoSize = true;
             this.GradeDrop.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.GradeDrop.Location = new System.Drawing.Point(571, 55);
+            this.GradeDrop.Location = new System.Drawing.Point(642, 66);
             this.GradeDrop.Name = "GradeDrop";
-            this.GradeDrop.Size = new System.Drawing.Size(39, 15);
+            this.GradeDrop.Size = new System.Drawing.Size(46, 18);
             this.GradeDrop.TabIndex = 11;
             this.GradeDrop.Text = "绩点";
             // 
@@ -143,9 +151,9 @@
             // 
             this.Grade.AutoSize = true;
             this.Grade.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.Grade.Location = new System.Drawing.Point(253, 52);
+            this.Grade.Location = new System.Drawing.Point(285, 62);
             this.Grade.Name = "Grade";
-            this.Grade.Size = new System.Drawing.Size(39, 15);
+            this.Grade.Size = new System.Drawing.Size(46, 18);
             this.Grade.TabIndex = 10;
             this.Grade.Text = "成绩";
             // 
@@ -153,9 +161,9 @@
             // 
             this.CourseName.AutoSize = true;
             this.CourseName.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.CourseName.Location = new System.Drawing.Point(3, 52);
+            this.CourseName.Location = new System.Drawing.Point(3, 62);
             this.CourseName.Name = "CourseName";
-            this.CourseName.Size = new System.Drawing.Size(55, 15);
+            this.CourseName.Size = new System.Drawing.Size(65, 18);
             this.CourseName.TabIndex = 9;
             this.CourseName.Text = "课程名";
             // 
@@ -163,35 +171,37 @@
             // 
             this.CourseNo.AutoSize = true;
             this.CourseNo.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.CourseNo.Location = new System.Drawing.Point(571, 13);
+            this.CourseNo.Location = new System.Drawing.Point(642, 16);
             this.CourseNo.Name = "CourseNo";
-            this.CourseNo.Size = new System.Drawing.Size(57, 15);
+            this.CourseNo.Size = new System.Drawing.Size(66, 18);
             this.CourseNo.TabIndex = 8;
             this.CourseNo.Text = "课程ID";
             // 
             // txtSname
             // 
-            this.txtSname.Location = new System.Drawing.Point(315, 9);
+            this.txtSname.Location = new System.Drawing.Point(354, 11);
+            this.txtSname.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSname.Name = "txtSname";
-            this.txtSname.Size = new System.Drawing.Size(144, 25);
+            this.txtSname.Size = new System.Drawing.Size(162, 28);
             this.txtSname.TabIndex = 7;
             // 
             // StudentName
             // 
             this.StudentName.AutoSize = true;
             this.StudentName.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.StudentName.Location = new System.Drawing.Point(253, 13);
+            this.StudentName.Location = new System.Drawing.Point(285, 16);
             this.StudentName.Name = "StudentName";
-            this.StudentName.Size = new System.Drawing.Size(39, 15);
+            this.StudentName.Size = new System.Drawing.Size(46, 18);
             this.StudentName.TabIndex = 6;
             this.StudentName.Text = "姓名";
             // 
             // btnUpdate
             // 
             this.btnUpdate.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnUpdate.Location = new System.Drawing.Point(613, 110);
+            this.btnUpdate.Location = new System.Drawing.Point(690, 132);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(153, 33);
+            this.btnUpdate.Size = new System.Drawing.Size(172, 40);
             this.btnUpdate.TabIndex = 5;
             this.btnUpdate.Text = "修改";
             this.btnUpdate.UseVisualStyleBackColor = true;
@@ -199,27 +209,29 @@
             // 
             // txtSno
             // 
-            this.txtSno.Location = new System.Drawing.Point(59, 6);
+            this.txtSno.Location = new System.Drawing.Point(66, 7);
+            this.txtSno.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSno.Name = "txtSno";
-            this.txtSno.Size = new System.Drawing.Size(157, 25);
+            this.txtSno.Size = new System.Drawing.Size(176, 28);
             this.txtSno.TabIndex = 4;
             // 
             // StudentNo
             // 
             this.StudentNo.AutoSize = true;
             this.StudentNo.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.StudentNo.Location = new System.Drawing.Point(0, 12);
+            this.StudentNo.Location = new System.Drawing.Point(0, 14);
             this.StudentNo.Name = "StudentNo";
-            this.StudentNo.Size = new System.Drawing.Size(57, 15);
+            this.StudentNo.Size = new System.Drawing.Size(66, 18);
             this.StudentNo.TabIndex = 3;
             this.StudentNo.Text = "学生ID";
             // 
             // btnSelect
             // 
             this.btnSelect.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnSelect.Location = new System.Drawing.Point(59, 109);
+            this.btnSelect.Location = new System.Drawing.Point(66, 131);
+            this.btnSelect.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSelect.Name = "btnSelect";
-            this.btnSelect.Size = new System.Drawing.Size(127, 34);
+            this.btnSelect.Size = new System.Drawing.Size(143, 41);
             this.btnSelect.TabIndex = 2;
             this.btnSelect.Text = "查询";
             this.btnSelect.UseVisualStyleBackColor = true;
@@ -228,9 +240,10 @@
             // btnDelete
             // 
             this.btnDelete.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnDelete.Location = new System.Drawing.Point(420, 109);
+            this.btnDelete.Location = new System.Drawing.Point(472, 131);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(140, 34);
+            this.btnDelete.Size = new System.Drawing.Size(158, 41);
             this.btnDelete.TabIndex = 1;
             this.btnDelete.Text = "删除";
             this.btnDelete.UseVisualStyleBackColor = true;
@@ -239,9 +252,10 @@
             // btnInsert
             // 
             this.btnInsert.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnInsert.Location = new System.Drawing.Point(236, 109);
+            this.btnInsert.Location = new System.Drawing.Point(266, 131);
+            this.btnInsert.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnInsert.Name = "btnInsert";
-            this.btnInsert.Size = new System.Drawing.Size(133, 34);
+            this.btnInsert.Size = new System.Drawing.Size(150, 41);
             this.btnInsert.TabIndex = 0;
             this.btnInsert.Text = "录入";
             this.btnInsert.UseVisualStyleBackColor = true;
@@ -255,20 +269,22 @@
             this.gvescore.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gvescore.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gvescore.Location = new System.Drawing.Point(0, 0);
+            this.gvescore.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gvescore.Name = "gvescore";
             this.gvescore.RowHeadersWidth = 51;
             this.gvescore.RowTemplate.Height = 27;
-            this.gvescore.Size = new System.Drawing.Size(985, 335);
+            this.gvescore.Size = new System.Drawing.Size(1108, 402);
             this.gvescore.TabIndex = 0;
             // 
             // teacher1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(985, 482);
+            this.ClientSize = new System.Drawing.Size(1108, 578);
             this.Controls.Add(this.splitContainer1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "teacher1";
             this.Text = "学生成绩录入";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

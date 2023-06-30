@@ -174,6 +174,7 @@
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "students_inf";
             this.Text = "信息查询";
             this.Load += new System.EventHandler(this.students_inf_Load);
