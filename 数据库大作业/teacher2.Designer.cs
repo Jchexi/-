@@ -41,6 +41,11 @@
             this.btnExport = new System.Windows.Forms.Button();
             this.btnSelectStudentID = new System.Windows.Forms.Button();
             this.gvescore = new System.Windows.Forms.DataGridView();
+            this.printDialog1 = new System.Windows.Forms.PrintDialog();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.pageSetupDialog1 = new System.Windows.Forms.PageSetupDialog();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.fontDialog1 = new System.Windows.Forms.FontDialog();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -85,6 +90,7 @@
             this.btnSelectGrade.TabIndex = 9;
             this.btnSelectGrade.Text = "查询年级";
             this.btnSelectGrade.UseVisualStyleBackColor = true;
+            this.btnSelectGrade.Click += new System.EventHandler(this.btnSelectGrade_Click);
             // 
             // btnSelectClass
             // 
@@ -95,6 +101,7 @@
             this.btnSelectClass.TabIndex = 8;
             this.btnSelectClass.Text = "查询班级";
             this.btnSelectClass.UseVisualStyleBackColor = true;
+            this.btnSelectClass.Click += new System.EventHandler(this.btnSelectClass_Click);
             // 
             // txtGrade
             // 
@@ -157,6 +164,7 @@
             this.btnExport.TabIndex = 1;
             this.btnExport.Text = "导出成绩";
             this.btnExport.UseVisualStyleBackColor = true;
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
             // 
             // btnSelectStudentID
             // 
@@ -180,6 +188,20 @@
             this.gvescore.RowTemplate.Height = 27;
             this.gvescore.Size = new System.Drawing.Size(800, 346);
             this.gvescore.TabIndex = 0;
+            // 
+            // printDialog1
+            // 
+            this.printDialog1.UseEXDialog = true;
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
             // 
             // teacher2
             // 
@@ -216,5 +238,10 @@
         private System.Windows.Forms.Button btnSelectStudentID;
         private System.Windows.Forms.Button btnSelectGrade;
         private System.Windows.Forms.Button btnSelectClass;
+        private System.Windows.Forms.PrintDialog printDialog1;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.PageSetupDialog pageSetupDialog1;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        private System.Windows.Forms.FontDialog fontDialog1;
     }
 }
