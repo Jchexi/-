@@ -81,14 +81,41 @@ namespace 数据库大作业
             }
         }
 
+
         private void butpasss_Click(object sender, EventArgs e)
         {
+            using (SqlConnection con = new SqlConnection(strCon))
+            {
+                string 学生ID = gveaprize.CurrentRow.Cells["学生ID"].Value.ToString();
+                con.Open();
+                if (con.State == ConnectionState.Open)
+                {
+                    string strCmd = "update 评优评先表 set 审核是否通过='{0}' ";
+                    strCmd = string.Format(strCmd, butpasss.Text, 学生ID);
 
+                    SqlCommand command = new SqlCommand(strCmd, con);
+                    command.ExecuteNonQuery();
+                    InitPrize();
+                }
+            }
         }
 
         private void butNpass_Click(object sender, EventArgs e)
         {
+            using (SqlConnection con = new SqlConnection(strCon))
+            {
+                string 学生ID = gveaprize.CurrentRow.Cells["学生ID"].Value.ToString();
+                con.Open();
+                if (con.State == ConnectionState.Open)
+                {
+                    string strCmd = "update 评优评先表 set 审核是否通过='{0}' ";
+                    strCmd = string.Format(strCmd, butNpass.Text, 学生ID);
 
+                    SqlCommand command = new SqlCommand(strCmd, con);
+                    command.ExecuteNonQuery();
+                    InitPrize();
+                }
+            }
         }
     }
 }

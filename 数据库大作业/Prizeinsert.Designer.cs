@@ -47,6 +47,7 @@
             this.txtSno = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.gvePrizeinsert = new System.Windows.Forms.DataGridView();
+            this.butselect = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -64,6 +65,7 @@
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.splitContainer1.Panel1.Controls.Add(this.butselect);
             this.splitContainer1.Panel1.Controls.Add(this.butupdate);
             this.splitContainer1.Panel1.Controls.Add(this.txtActna);
             this.splitContainer1.Panel1.Controls.Add(this.label7);
@@ -80,6 +82,7 @@
             this.splitContainer1.Panel1.Controls.Add(this.label2);
             this.splitContainer1.Panel1.Controls.Add(this.txtSno);
             this.splitContainer1.Panel1.Controls.Add(this.label1);
+            this.splitContainer1.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel1_Paint);
             // 
             // splitContainer1.Panel2
             // 
@@ -91,9 +94,9 @@
             // butupdate
             // 
             this.butupdate.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.butupdate.Location = new System.Drawing.Point(678, 161);
+            this.butupdate.Location = new System.Drawing.Point(758, 161);
             this.butupdate.Name = "butupdate";
-            this.butupdate.Size = new System.Drawing.Size(106, 32);
+            this.butupdate.Size = new System.Drawing.Size(162, 32);
             this.butupdate.TabIndex = 16;
             this.butupdate.Text = "修改";
             this.butupdate.UseVisualStyleBackColor = true;
@@ -119,9 +122,9 @@
             // butplease
             // 
             this.butplease.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.butplease.Location = new System.Drawing.Point(466, 161);
+            this.butplease.Location = new System.Drawing.Point(484, 161);
             this.butplease.Name = "butplease";
-            this.butplease.Size = new System.Drawing.Size(98, 32);
+            this.butplease.Size = new System.Drawing.Size(171, 32);
             this.butplease.TabIndex = 13;
             this.butplease.Text = "提交申请";
             this.butplease.UseVisualStyleBackColor = true;
@@ -241,6 +244,17 @@
             this.gvePrizeinsert.Size = new System.Drawing.Size(1137, 358);
             this.gvePrizeinsert.TabIndex = 0;
             // 
+            // butselect
+            // 
+            this.butselect.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.butselect.Location = new System.Drawing.Point(155, 161);
+            this.butselect.Name = "butselect";
+            this.butselect.Size = new System.Drawing.Size(204, 32);
+            this.butselect.TabIndex = 17;
+            this.butselect.Text = "输入学生ID查询结果";
+            this.butselect.UseVisualStyleBackColor = true;
+            this.butselect.Click += new System.EventHandler(this.butselect_Click);
+            // 
             // 学生评优评先表信息录入
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -282,5 +296,6 @@
         private System.Windows.Forms.TextBox txtPna;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button butupdate;
+        private System.Windows.Forms.Button butselect;
     }
 }
