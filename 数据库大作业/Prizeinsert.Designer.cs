@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(学生评优评先表信息录入));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.butupdate = new System.Windows.Forms.Button();
             this.txtActna = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.butplease = new System.Windows.Forms.Button();
@@ -46,7 +47,6 @@
             this.txtSno = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.gvePrizeinsert = new System.Windows.Forms.DataGridView();
-            this.butupdate = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -87,6 +87,17 @@
             this.splitContainer1.Size = new System.Drawing.Size(1137, 550);
             this.splitContainer1.SplitterDistance = 188;
             this.splitContainer1.TabIndex = 0;
+            // 
+            // butupdate
+            // 
+            this.butupdate.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.butupdate.Location = new System.Drawing.Point(678, 161);
+            this.butupdate.Name = "butupdate";
+            this.butupdate.Size = new System.Drawing.Size(106, 32);
+            this.butupdate.TabIndex = 16;
+            this.butupdate.Text = "修改";
+            this.butupdate.UseVisualStyleBackColor = true;
+            this.butupdate.Click += new System.EventHandler(this.butupdate_Click);
             // 
             // txtActna
             // 
@@ -229,17 +240,6 @@
             this.gvePrizeinsert.RowTemplate.Height = 27;
             this.gvePrizeinsert.Size = new System.Drawing.Size(1137, 358);
             this.gvePrizeinsert.TabIndex = 0;
-            // 
-            // butupdate
-            // 
-            this.butupdate.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.butupdate.Location = new System.Drawing.Point(678, 161);
-            this.butupdate.Name = "butupdate";
-            this.butupdate.Size = new System.Drawing.Size(106, 28);
-            this.butupdate.TabIndex = 16;
-            this.butupdate.Text = "修改";
-            this.butupdate.UseVisualStyleBackColor = true;
-            this.butupdate.Click += new System.EventHandler(this.butupdate_Click);
             // 
             // 学生评优评先表信息录入
             // 
