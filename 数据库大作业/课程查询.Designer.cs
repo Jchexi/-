@@ -1,6 +1,6 @@
 ﻿namespace 数据库大作业
 {
-    partial class 成绩查询
+    partial class 课程查询
     {
         /// <summary>
         /// Required designer variable.
@@ -28,19 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(成绩查询));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(课程查询));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.gvescore = new System.Windows.Forms.DataGridView();
+            this.gveCoures = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnSelect = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtSno = new System.Windows.Forms.TextBox();
-            this.txtSName = new System.Windows.Forms.TextBox();
+            this.butselect = new System.Windows.Forms.Button();
+            this.cobterm = new System.Windows.Forms.ComboBox();
+            this.cobmajor = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gvescore)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gveCoures)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -53,91 +53,96 @@
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.splitContainer1.Panel1.Controls.Add(this.txtSName);
-            this.splitContainer1.Panel1.Controls.Add(this.txtSno);
+            this.splitContainer1.Panel1.Controls.Add(this.cobmajor);
+            this.splitContainer1.Panel1.Controls.Add(this.cobterm);
+            this.splitContainer1.Panel1.Controls.Add(this.butselect);
             this.splitContainer1.Panel1.Controls.Add(this.label2);
-            this.splitContainer1.Panel1.Controls.Add(this.btnSelect);
             this.splitContainer1.Panel1.Controls.Add(this.label1);
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.gvescore);
+            this.splitContainer1.Panel2.Controls.Add(this.gveCoures);
             this.splitContainer1.Size = new System.Drawing.Size(800, 450);
-            this.splitContainer1.SplitterDistance = 114;
+            this.splitContainer1.SplitterDistance = 191;
             this.splitContainer1.TabIndex = 0;
             // 
-            // gvescore
+            // gveCoures
             // 
-            this.gvescore.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gvescore.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gvescore.Location = new System.Drawing.Point(0, 0);
-            this.gvescore.Name = "gvescore";
-            this.gvescore.RowHeadersWidth = 51;
-            this.gvescore.RowTemplate.Height = 27;
-            this.gvescore.Size = new System.Drawing.Size(800, 332);
-            this.gvescore.TabIndex = 0;
+            this.gveCoures.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.gveCoures.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gveCoures.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gveCoures.Location = new System.Drawing.Point(0, 0);
+            this.gveCoures.Name = "gveCoures";
+            this.gveCoures.RowHeadersWidth = 51;
+            this.gveCoures.RowTemplate.Height = 27;
+            this.gveCoures.Size = new System.Drawing.Size(800, 255);
+            this.gveCoures.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.Location = new System.Drawing.Point(115, 22);
+            this.label1.Location = new System.Drawing.Point(263, 28);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 15);
+            this.label1.Size = new System.Drawing.Size(39, 15);
             this.label1.TabIndex = 0;
-            this.label1.Text = "学生ID";
-            // 
-            // btnSelect
-            // 
-            this.btnSelect.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnSelect.Location = new System.Drawing.Point(298, 83);
-            this.btnSelect.Name = "btnSelect";
-            this.btnSelect.Size = new System.Drawing.Size(110, 29);
-            this.btnSelect.TabIndex = 1;
-            this.btnSelect.Text = "查询";
-            this.btnSelect.UseVisualStyleBackColor = true;
-            this.btnSelect.Click += new System.EventHandler(this.btnSelect_Click);
+            this.label1.Text = "学期";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label2.Location = new System.Drawing.Point(363, 16);
+            this.label2.Location = new System.Drawing.Point(263, 96);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 15);
+            this.label2.Size = new System.Drawing.Size(39, 15);
             this.label2.TabIndex = 2;
-            this.label2.Text = "学生姓名";
+            this.label2.Text = "专业";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // txtSno
+            // butselect
             // 
-            this.txtSno.Location = new System.Drawing.Point(176, 13);
-            this.txtSno.Name = "txtSno";
-            this.txtSno.Size = new System.Drawing.Size(131, 25);
-            this.txtSno.TabIndex = 4;
+            this.butselect.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.butselect.Location = new System.Drawing.Point(354, 152);
+            this.butselect.Name = "butselect";
+            this.butselect.Size = new System.Drawing.Size(83, 36);
+            this.butselect.TabIndex = 4;
+            this.butselect.Text = "查询";
+            this.butselect.UseVisualStyleBackColor = true;
+            this.butselect.Click += new System.EventHandler(this.butselect_Click);
             // 
-            // txtSName
+            // cobterm
             // 
-            this.txtSName.Location = new System.Drawing.Point(440, 12);
-            this.txtSName.Name = "txtSName";
-            this.txtSName.Size = new System.Drawing.Size(116, 25);
-            this.txtSName.TabIndex = 5;
+            this.cobterm.FormattingEnabled = true;
+            this.cobterm.Location = new System.Drawing.Point(326, 25);
+            this.cobterm.Name = "cobterm";
+            this.cobterm.Size = new System.Drawing.Size(136, 23);
+            this.cobterm.TabIndex = 5;
             // 
-            // 成绩查询
+            // cobmajor
+            // 
+            this.cobmajor.FormattingEnabled = true;
+            this.cobmajor.Location = new System.Drawing.Point(326, 93);
+            this.cobmajor.Name = "cobmajor";
+            this.cobmajor.Size = new System.Drawing.Size(136, 23);
+            this.cobmajor.TabIndex = 6;
+            // 
+            // 课程查询
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.splitContainer1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "成绩查询";
-            this.Text = "成绩查询";
+            this.Name = "课程查询";
+            this.Text = "课程查询";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.课程查询_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gvescore)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gveCoures)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -145,11 +150,11 @@
         #endregion
 
         private System.Windows.Forms.SplitContainer splitContainer1;
-        private System.Windows.Forms.DataGridView gvescore;
-        private System.Windows.Forms.TextBox txtSName;
-        private System.Windows.Forms.TextBox txtSno;
+        private System.Windows.Forms.DataGridView gveCoures;
+        private System.Windows.Forms.Button butselect;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnSelect;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cobmajor;
+        private System.Windows.Forms.ComboBox cobterm;
     }
 }

@@ -96,6 +96,12 @@
     <Compile Include="成绩查询.Designer.cs">
       <DependentUpon>成绩查询.cs</DependentUpon>
     </Compile>
+    <Compile Include="课程查询.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="课程查询.Designer.cs">
+      <DependentUpon>课程查询.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -128,6 +134,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="成绩查询.resx">
       <DependentUpon>成绩查询.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="课程查询.resx">
+      <DependentUpon>课程查询.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

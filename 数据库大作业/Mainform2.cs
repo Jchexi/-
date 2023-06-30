@@ -41,5 +41,10 @@ namespace 数据库大作业
         {
             new 成绩查询().Show();
         }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            new 课程查询().Show();
+        }
     }
 }
