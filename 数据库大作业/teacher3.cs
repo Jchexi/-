@@ -73,7 +73,7 @@ namespace 数据库大作业
             using (SqlConnection con = new SqlConnection(strCon))
             {
                 string strCmd = "select * from 评优评先表 where 学生ID = {0}";
-                strCmd = string.Format(strCmd, txtSnomber);
+                strCmd = string.Format(strCmd, txtSnomber.Text);
                 SqlDataAdapter da = new SqlDataAdapter(strCmd, con);
                 DataSet ds = new DataSet();
                 da.Fill(ds);

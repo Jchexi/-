@@ -91,6 +91,7 @@
             // 
             // btnStatistic
             // 
+            this.btnStatistic.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnStatistic.Location = new System.Drawing.Point(824, 110);
             this.btnStatistic.Name = "btnStatistic";
             this.btnStatistic.Size = new System.Drawing.Size(139, 33);
@@ -131,36 +132,40 @@
             // GradeDrop
             // 
             this.GradeDrop.AutoSize = true;
+            this.GradeDrop.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.GradeDrop.Location = new System.Drawing.Point(571, 55);
             this.GradeDrop.Name = "GradeDrop";
-            this.GradeDrop.Size = new System.Drawing.Size(37, 15);
+            this.GradeDrop.Size = new System.Drawing.Size(39, 15);
             this.GradeDrop.TabIndex = 11;
             this.GradeDrop.Text = "绩点";
             // 
             // Grade
             // 
             this.Grade.AutoSize = true;
+            this.Grade.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.Grade.Location = new System.Drawing.Point(253, 52);
             this.Grade.Name = "Grade";
-            this.Grade.Size = new System.Drawing.Size(37, 15);
+            this.Grade.Size = new System.Drawing.Size(39, 15);
             this.Grade.TabIndex = 10;
             this.Grade.Text = "成绩";
             // 
             // CourseName
             // 
             this.CourseName.AutoSize = true;
+            this.CourseName.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.CourseName.Location = new System.Drawing.Point(3, 52);
             this.CourseName.Name = "CourseName";
-            this.CourseName.Size = new System.Drawing.Size(52, 15);
+            this.CourseName.Size = new System.Drawing.Size(55, 15);
             this.CourseName.TabIndex = 9;
             this.CourseName.Text = "课程名";
             // 
             // CourseNo
             // 
             this.CourseNo.AutoSize = true;
+            this.CourseNo.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.CourseNo.Location = new System.Drawing.Point(571, 13);
             this.CourseNo.Name = "CourseNo";
-            this.CourseNo.Size = new System.Drawing.Size(53, 15);
+            this.CourseNo.Size = new System.Drawing.Size(57, 15);
             this.CourseNo.TabIndex = 8;
             this.CourseNo.Text = "课程ID";
             // 
@@ -174,14 +179,16 @@
             // StudentName
             // 
             this.StudentName.AutoSize = true;
+            this.StudentName.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.StudentName.Location = new System.Drawing.Point(253, 13);
             this.StudentName.Name = "StudentName";
-            this.StudentName.Size = new System.Drawing.Size(37, 15);
+            this.StudentName.Size = new System.Drawing.Size(39, 15);
             this.StudentName.TabIndex = 6;
             this.StudentName.Text = "姓名";
             // 
             // btnUpdate
             // 
+            this.btnUpdate.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnUpdate.Location = new System.Drawing.Point(613, 110);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(153, 33);
@@ -200,14 +207,16 @@
             // StudentNo
             // 
             this.StudentNo.AutoSize = true;
+            this.StudentNo.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.StudentNo.Location = new System.Drawing.Point(0, 12);
             this.StudentNo.Name = "StudentNo";
-            this.StudentNo.Size = new System.Drawing.Size(53, 15);
+            this.StudentNo.Size = new System.Drawing.Size(57, 15);
             this.StudentNo.TabIndex = 3;
             this.StudentNo.Text = "学生ID";
             // 
             // btnSelect
             // 
+            this.btnSelect.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnSelect.Location = new System.Drawing.Point(59, 109);
             this.btnSelect.Name = "btnSelect";
             this.btnSelect.Size = new System.Drawing.Size(127, 34);
@@ -218,6 +227,7 @@
             // 
             // btnDelete
             // 
+            this.btnDelete.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnDelete.Location = new System.Drawing.Point(420, 109);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(140, 34);
@@ -228,6 +238,7 @@
             // 
             // btnInsert
             // 
+            this.btnInsert.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnInsert.Location = new System.Drawing.Point(236, 109);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(133, 34);

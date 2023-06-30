@@ -72,14 +72,14 @@
             // 
             // txtSname
             // 
-            this.txtSname.Location = new System.Drawing.Point(423, 24);
+            this.txtSname.Location = new System.Drawing.Point(423, 22);
             this.txtSname.Name = "txtSname";
-            this.txtSname.Size = new System.Drawing.Size(120, 25);
+            this.txtSname.Size = new System.Drawing.Size(130, 25);
             this.txtSname.TabIndex = 6;
             // 
             // txtSnomber
             // 
-            this.txtSnomber.Location = new System.Drawing.Point(159, 27);
+            this.txtSnomber.Location = new System.Drawing.Point(159, 22);
             this.txtSnomber.Name = "txtSnomber";
             this.txtSnomber.Size = new System.Drawing.Size(131, 25);
             this.txtSnomber.TabIndex = 5;
@@ -131,7 +131,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label2.Location = new System.Drawing.Point(98, 30);
+            this.label2.Location = new System.Drawing.Point(98, 27);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 15);
             this.label2.TabIndex = 0;
