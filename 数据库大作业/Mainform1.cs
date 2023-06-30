@@ -32,5 +32,10 @@ namespace 数据库大作业
         {
             new teacher2().Show();
         }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+            new teacher3().Show();
+        }
     }
 }

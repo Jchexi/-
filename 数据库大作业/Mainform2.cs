@@ -42,5 +42,10 @@ namespace 数据库大作业
         {
             
         }
+
+        private void toolStripButton4_Click(object sender, EventArgs e)
+        {
+            new 学生评优评先表信息录入().Show();
+        }
     }
 }

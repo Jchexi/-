@@ -29,7 +29,7 @@ namespace 数据库大作业
         {
             using (SqlConnection con = new SqlConnection(strCon))
             {
-                string strCmd = "select * from 成绩表 where 学生ID='{0}'";
+                string strCmd = "select * from 成绩表 where 学生ID={0}";
                 strCmd = string.Format(strCmd, txtSno.Text);
                 SqlDataAdapter da = new SqlDataAdapter(strCmd, con);
                 DataSet ds = new DataSet();

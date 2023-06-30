@@ -65,6 +65,12 @@
     <Compile Include="Mainform2.Designer.cs">
       <DependentUpon>Mainform2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Prizeinsert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prizeinsert.Designer.cs">
+      <DependentUpon>Prizeinsert.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="students_inf.cs">
@@ -85,6 +91,12 @@
     <Compile Include="teacher2.Designer.cs">
       <DependentUpon>teacher2.cs</DependentUpon>
     </Compile>
+    <Compile Include="teacher3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="teacher3.Designer.cs">
+      <DependentUpon>teacher3.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -93,6 +105,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Mainform2.resx">
       <DependentUpon>Mainform2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prizeinsert.resx">
+      <DependentUpon>Prizeinsert.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -111,6 +126,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="teacher2.resx">
       <DependentUpon>teacher2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="teacher3.resx">
+      <DependentUpon>teacher3.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
