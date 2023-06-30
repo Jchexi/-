@@ -19,10 +19,10 @@ namespace 数据库大作业
             InitializeComponent();
         }
 
-        private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
+        /*private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
         {
 
-        }
+        }*/
         public void InitPrize()
         {
             using (SqlConnection con = new SqlConnection(strCon))
@@ -31,15 +31,15 @@ namespace 数据库大作业
                 SqlDataAdapter da = new SqlDataAdapter(strCmd, con);
                 DataSet ds = new DataSet();
                 da.Fill(ds);
-                gveprize.DataSource = ds.Tables[0].DefaultView;
+                gveaprize.DataSource = ds.Tables[0].DefaultView;
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        /*private void button1_Click(object sender, EventArgs e)
         {
             using (SqlConnection con = new SqlConnection(strCon))
             {
-                string strCmd = "select * from 评优评先表 where 学生ID='{0}'";
+                string strCmd = "select * from 评优评先表 where 学生ID={0}";
                 strCmd = string.Format(strCmd, txtSno.Text);
                 SqlDataAdapter da = new SqlDataAdapter(strCmd, con);
                 DataSet ds = new DataSet();
@@ -61,6 +61,34 @@ namespace 数据库大作业
         private void teacher3_Load(object sender, EventArgs e)
         {
             InitPrize();
+        }*/
+
+        private void teacher3_Load_1(object sender, EventArgs e)
+        {
+            InitPrize();
+        }
+
+        private void butselsct_Click(object sender, EventArgs e)
+        {
+            using (SqlConnection con = new SqlConnection(strCon))
+            {
+                string strCmd = "select * from 评优评先表 where 学生ID = {0}";
+                strCmd = string.Format(strCmd, txtSnomber);
+                SqlDataAdapter da = new SqlDataAdapter(strCmd, con);
+                DataSet ds = new DataSet();
+                da.Fill(ds);
+                gveaprize.DataSource = ds.Tables[0].DefaultView;
+            }
+        }
+
+        private void butpasss_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void butNpass_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
