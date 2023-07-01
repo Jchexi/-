@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Office.Interop.Excel;
 
+
 namespace 数据库大作业
 {
     public partial class teacher2 : Form
@@ -78,7 +79,7 @@ namespace 数据库大作业
                 gvescore.DataSource = ds.Tables[0].DefaultView;
             }
         }
-        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        /*private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
             Graphics g = e.Graphics;
             string[] str = gvescore.Text.Split('\n');
@@ -89,7 +90,7 @@ namespace 数据库大作业
                     new PointF(100, 80 + gvescore.Font.Height * i));
                 i++;
             }
-        }
+        }*/
 
         private void btnExport_Click(object sender, EventArgs e)
         {

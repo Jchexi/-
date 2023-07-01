@@ -95,6 +95,7 @@ namespace 数据库大作业
             using (SqlConnection con = new SqlConnection(strCon))
             {
                 string 学生ID = gvescore.CurrentRow.Cells["学生ID"].Value.ToString();
+                string 课程名称= gvescore.CurrentRow.Cells["课程名称"].Value.ToString();
                 con.Open();
                 if (con.State == ConnectionState.Open)
                 {
