@@ -58,7 +58,7 @@ namespace 数据库大作业
                 float credit = 0;
                 if (con.State == ConnectionState.Open)
                 {
-                    string strCmd1 = "select * from 成绩表 where 学生ID='{0}'";
+                    string strCmd1 = "select * from 成绩表 where 学生ID='{0}' and 成绩>=60";
                     strCmd1 = string.Format(strCmd1, txtUserName.Text);
                     SqlCommand command = new SqlCommand();
                     command.Connection = con;
