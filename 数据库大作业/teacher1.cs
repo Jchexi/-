@@ -46,18 +46,10 @@ namespace 数据库大作业
                 con.Open();
                 if (con.State == ConnectionState.Open)
                 {
-                    string strCmd1 = "select 学分 from 课程表 where 课程ID='{0}'";
-                    strCmd1 = string.Format(strCmd1, txtCno.Text);
-
-                    SqlCommand command = new SqlCommand();
-                    command.Connection = con;
-                    command.CommandText = strCmd1;
-                    SqlDataReader dr = command.ExecuteReader();
-
-                    string strCmd = "insert 成绩表 values({0},'{1}',{2},'{3}','{4}','{5}',{6})";
-                    strCmd = string.Format(strCmd, txtSno.Text, txtSname.Text, txtCno.Text, txtCname.Text, txtMark.Text, txtGradedrop.Text,dr);
-                    SqlCommand command1 = new SqlCommand(strCmd, con);
-                    command1.ExecuteNonQuery();
+                    string strCmd = "insert 成绩表 values({0},'{1}',{2},'{3}','{4}','{5}','{6}')";
+                    strCmd = string.Format(strCmd, txtSno.Text, txtSname.Text, txtCno.Text, txtCname.Text, txtMark.Text, txtGradedrop.Text, txtcredit.Text);
+                    SqlCommand command = new SqlCommand(strCmd, con);
+                    command.ExecuteNonQuery();
                     InitScore();
                 }
             }
@@ -105,24 +97,15 @@ namespace 数据库大作业
                 con.Open();
                 if (con.State == ConnectionState.Open)
                 {
-                    string strCmd1 = "select 学分 from 课程表 where 课程ID='{0}'";
-                    strCmd1 = string.Format(strCmd1, txtCno.Text);
-
-                    SqlCommand command = new SqlCommand();
-                    command.Connection = con;
-                    command.CommandText = strCmd1;
-                    SqlDataReader dr = command.ExecuteReader();
-
-                    string strCmd = "update 成绩表 set 学生ID={0},学生姓名='{1}',课程ID={2},课程名称='{3}',成绩='{4}',绩点='{5}'";
-                    strCmd = string.Format(strCmd, txtSno.Text, txtSname.Text, txtCno.Text, txtCname.Text, txtMark.Text, txtGradedrop.Text, dr);// 学生ID);
-
-                    SqlCommand command1 = new SqlCommand(strCmd, con);
-                    command1.ExecuteNonQuery();
+                    string strCmd = "update 成绩表 set 学生ID={0},学生姓名='{1}',课程ID={2},课程名='{3}',成绩='{4}',绩点='{5}',学分='{6}'";
+                    strCmd = string.Format(strCmd, txtSno.Text, txtSname.Text, txtCno.Text, txtCname.Text, txtMark.Text, txtGradedrop.Text, txtcredit.Text, 学生ID);
+                    SqlCommand command = new SqlCommand(strCmd, con);
+                    command.ExecuteNonQuery();
                     InitScore();
                 }
+
             }
         }
-
         private void btnStatistic_Click(object sender, EventArgs e)
         {
             using (SqlConnection con = new SqlConnection(strCon))
