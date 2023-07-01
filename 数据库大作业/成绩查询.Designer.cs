@@ -68,6 +68,7 @@
             // 
             // gvescore
             // 
+            this.gvescore.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gvescore.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gvescore.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gvescore.Location = new System.Drawing.Point(0, 0);

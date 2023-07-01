@@ -90,8 +90,8 @@ namespace 数据库大作业
                 con.Open();
                 if (con.State == ConnectionState.Open)
                 {
-                    string strCmd = "update 评优评先表 set 审核是否通过='{0}' ";
-                    strCmd = string.Format(strCmd, butpasss.Text, 学生ID);
+                    string strCmd = "update 评优评先表 set 审核是否通过='{0}'  ";
+                    strCmd = string.Format(strCmd, butpasss.Text ,学生ID);
 
                     SqlCommand command = new SqlCommand(strCmd, con);
                     command.ExecuteNonQuery();
@@ -108,8 +108,8 @@ namespace 数据库大作业
                 con.Open();
                 if (con.State == ConnectionState.Open)
                 {
-                    string strCmd = "update 评优评先表 set 审核是否通过='{0}' ";
-                    strCmd = string.Format(strCmd, butNpass.Text, 学生ID);
+                    string strCmd = "update 评优评先表 set 审核是否通过='{0}'";
+                    strCmd = string.Format(strCmd, butNpass.Text, 学生ID );
 
                     SqlCommand command = new SqlCommand(strCmd, con);
                     command.ExecuteNonQuery();
