@@ -93,11 +93,12 @@ namespace 数据库大作业
             using (SqlConnection con = new SqlConnection(strCon))
             {
                 string 学生ID = gvescore.CurrentRow.Cells["学生ID"].Value.ToString();
+                string 课程名称= gvescore.CurrentRow.Cells["课程名称"].Value.ToString();
                 con.Open();
                 if (con.State == ConnectionState.Open)
                 {
-                    string strCmd = "update 成绩表 set 学生ID={0},学生姓名='{1}',课程ID={2},课程名称='{3}',成绩='{4}',绩点='{5}',学分='{6}'";
-                    strCmd = string.Format(strCmd, txtSno.Text, txtSname.Text, txtCno.Text, txtCname.Text, txtMark.Text,txtGradedrop.Text ,txtcredit.Text,学生ID);
+                    string strCmd = "update 成绩表 set 学生ID={0},学生姓名='{1}',课程ID={2},课程名称='{3}',成绩='{4}',绩点='{5}',学分='{6}' where 学生ID='{7}' AND 课程名称='{8}'";
+                    strCmd = string.Format(strCmd, txtSno.Text, txtSname.Text, txtCno.Text, txtCname.Text, txtMark.Text,txtGradedrop.Text ,txtcredit.Text,学生ID,课程名称);
 
                     SqlCommand command = new SqlCommand(strCmd, con);
                     command.ExecuteNonQuery();

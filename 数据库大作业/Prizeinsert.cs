@@ -55,12 +55,12 @@ namespace 数据库大作业
         {
             using (SqlConnection con = new SqlConnection(strCon))
             {
-                string 学生ID = gvePrizeinsert.CurrentRow.Cells["学生ID"].Value.ToString();
+                string 奖项名称 = gvePrizeinsert.CurrentRow.Cells["奖项名称"].Value.ToString();
                 con.Open();
                 if (con.State == ConnectionState.Open)
                 {
-                    string strCmd = "update 评优评先表 set 学生ID={0},奖项名称='{1}',奖项等级='{2}',活动名称='{3}',获奖时间='{4}',应得学分='{5}',学生姓名='{6}'";
-                    strCmd = string.Format(strCmd, txtSno.Text, txtPna.Text, txtlevel.Text, txtActna.Text, txttime.Text, txtCredit.Text,txtSname.Text, 学生ID);
+                    string strCmd = "update 评优评先表 set 学生ID={0},奖项名称='{1}',奖项等级='{2}',活动名称='{3}',获奖时间='{4}',应得学分='{5}',学生姓名='{6}' where 奖项名称='{7}' ";
+                    strCmd = string.Format(strCmd, txtSno.Text, txtPna.Text, txtlevel.Text, txtActna.Text, txttime.Text, txtCredit.Text,txtSname.Text, 奖项名称);
 
                     SqlCommand command = new SqlCommand(strCmd, con);
                     command.ExecuteNonQuery();
@@ -73,7 +73,7 @@ namespace 数据库大作业
         {
             using (SqlConnection con = new SqlConnection(strCon))
             {
-                string strCmd = "select * from 评优评先表 where 学生ID={0}";
+                string strCmd = "select * from 评优评先表 where 学生ID='{0}'";
                 strCmd = string.Format(strCmd, txtSno.Text);
                 SqlDataAdapter da = new SqlDataAdapter(strCmd, con);
                 DataSet ds = new DataSet();
@@ -91,12 +91,12 @@ namespace 数据库大作业
         {
             using (SqlConnection con = new SqlConnection(strCon))
             {
-                string 学生ID =gvePrizeinsert.CurrentRow.Cells["学生ID"].Value.ToString();
+                string 奖项名称 =gvePrizeinsert.CurrentRow.Cells["奖项名称"].Value.ToString();
                 con.Open();
                 if (con.State == ConnectionState.Open)
                 {
-                    string strCmd = "delete from 评优评先表 where 学生ID={0}";
-                    strCmd = string.Format(strCmd, 学生ID);
+                    string strCmd = "delete from 评优评先表 where 奖项名称='{0}'";
+                    strCmd = string.Format(strCmd, 奖项名称);
 
                     SqlCommand command = new SqlCommand(strCmd, con);
                     command.ExecuteNonQuery();
