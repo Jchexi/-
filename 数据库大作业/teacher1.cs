@@ -75,6 +75,7 @@ namespace 数据库大作业
         {
             using (SqlConnection con = new SqlConnection(strCon))
             {
+               
                 string 学生ID = gvescore.CurrentRow.Cells["学生ID"].Value.ToString();
                 con.Open();
                 if (con.State == ConnectionState.Open)
@@ -97,8 +98,8 @@ namespace 数据库大作业
                 con.Open();
                 if (con.State == ConnectionState.Open)
                 {
-                    string strCmd = "update 成绩表 set 学生ID={0},学生姓名='{1}',课程ID={2},课程名='{3}',成绩='{4}',绩点='{5}',学分='{6}'";
-                    strCmd = string.Format(strCmd, txtSno.Text, txtSname.Text, txtCno.Text, txtCname.Text, txtMark.Text, txtGradedrop.Text, txtcredit.Text, 学生ID);
+                    string strCmd = "update 成绩表 set 学生ID={0},学生姓名='{1}',课程ID={2},课程名称='{3}',成绩='{4}',绩点='{5}',学分='{6}' where 学生ID={7} and 课程ID={8}";
+                    strCmd = string.Format(strCmd, txtSno.Text, txtSname.Text, txtCno.Text, txtCname.Text, txtMark.Text, txtGradedrop.Text, txtcredit.Text, 学生ID, txtCno.Text);
                     SqlCommand command = new SqlCommand(strCmd, con);
                     command.ExecuteNonQuery();
                     InitScore();
@@ -134,6 +135,11 @@ namespace 数据库大作业
         private void button1_Click(object sender, EventArgs e)
         {
             InitScore();
+        }
+
+        private void txtCname_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

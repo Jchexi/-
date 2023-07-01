@@ -61,9 +61,15 @@ namespace 数据库大作业
             new students_credit().Show();
         }
 
-        private void toolStripButton3_Click(object sender, EventArgs e)
+        /*private void toolStripButton3_Click(object sender, EventArgs e)
         {
             new students_credit().Show();
+        }*/
+
+        private void toolStripButton3_Click_1(object sender, EventArgs e)
+        {
+
         }
+        
     }
 }

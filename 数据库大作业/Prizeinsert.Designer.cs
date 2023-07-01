@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(学生评优评先表信息录入));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.button1 = new System.Windows.Forms.Button();
+            this.butselect = new System.Windows.Forms.Button();
             this.butupdate = new System.Windows.Forms.Button();
             this.txtActna = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -47,8 +49,8 @@
             this.txtSno = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.gvePrizeinsert = new System.Windows.Forms.DataGridView();
-            this.butselect = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -60,12 +62,15 @@
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.splitContainer1.Name = "splitContainer1";
             this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.splitContainer1.Panel1.Controls.Add(this.label8);
+            this.splitContainer1.Panel1.Controls.Add(this.button2);
             this.splitContainer1.Panel1.Controls.Add(this.button1);
             this.splitContainer1.Panel1.Controls.Add(this.butselect);
             this.splitContainer1.Panel1.Controls.Add(this.butupdate);
@@ -89,16 +94,42 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.gvePrizeinsert);
-            this.splitContainer1.Size = new System.Drawing.Size(1137, 550);
-            this.splitContainer1.SplitterDistance = 188;
+            this.splitContainer1.Size = new System.Drawing.Size(1279, 660);
+            this.splitContainer1.SplitterDistance = 225;
+            this.splitContainer1.SplitterWidth = 5;
             this.splitContainer1.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button1.Location = new System.Drawing.Point(1118, 191);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(161, 41);
+            this.button1.TabIndex = 18;
+            this.button1.Text = "取消申请";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // butselect
+            // 
+            this.butselect.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.butselect.Location = new System.Drawing.Point(174, 193);
+            this.butselect.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.butselect.Name = "butselect";
+            this.butselect.Size = new System.Drawing.Size(230, 38);
+            this.butselect.TabIndex = 17;
+            this.butselect.Text = "输入学生ID查询结果";
+            this.butselect.UseVisualStyleBackColor = true;
+            this.butselect.Click += new System.EventHandler(this.butselect_Click);
             // 
             // butupdate
             // 
             this.butupdate.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.butupdate.Location = new System.Drawing.Point(758, 161);
+            this.butupdate.Location = new System.Drawing.Point(853, 193);
+            this.butupdate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.butupdate.Name = "butupdate";
-            this.butupdate.Size = new System.Drawing.Size(162, 32);
+            this.butupdate.Size = new System.Drawing.Size(182, 38);
             this.butupdate.TabIndex = 16;
             this.butupdate.Text = "修改";
             this.butupdate.UseVisualStyleBackColor = true;
@@ -106,27 +137,29 @@
             // 
             // txtActna
             // 
-            this.txtActna.Location = new System.Drawing.Point(994, 19);
+            this.txtActna.Location = new System.Drawing.Point(1118, 23);
+            this.txtActna.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtActna.Name = "txtActna";
-            this.txtActna.Size = new System.Drawing.Size(127, 25);
+            this.txtActna.Size = new System.Drawing.Size(142, 28);
             this.txtActna.TabIndex = 15;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label7.Location = new System.Drawing.Point(917, 22);
+            this.label7.Location = new System.Drawing.Point(1032, 26);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(71, 15);
+            this.label7.Size = new System.Drawing.Size(84, 18);
             this.label7.TabIndex = 14;
             this.label7.Text = "活动名称";
             // 
             // butplease
             // 
             this.butplease.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.butplease.Location = new System.Drawing.Point(484, 161);
+            this.butplease.Location = new System.Drawing.Point(544, 193);
+            this.butplease.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.butplease.Name = "butplease";
-            this.butplease.Size = new System.Drawing.Size(171, 32);
+            this.butplease.Size = new System.Drawing.Size(192, 38);
             this.butplease.TabIndex = 13;
             this.butplease.Text = "提交申请";
             this.butplease.UseVisualStyleBackColor = true;
@@ -134,103 +167,113 @@
             // 
             // txtSname
             // 
-            this.txtSname.Location = new System.Drawing.Point(759, 97);
+            this.txtSname.Location = new System.Drawing.Point(854, 116);
+            this.txtSname.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSname.Name = "txtSname";
-            this.txtSname.Size = new System.Drawing.Size(141, 25);
+            this.txtSname.Size = new System.Drawing.Size(158, 28);
             this.txtSname.TabIndex = 11;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label6.Location = new System.Drawing.Point(682, 106);
+            this.label6.Location = new System.Drawing.Point(767, 127);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(71, 15);
+            this.label6.Size = new System.Drawing.Size(84, 18);
             this.label6.TabIndex = 10;
             this.label6.Text = "学生姓名";
             // 
             // txtCredit
             // 
-            this.txtCredit.Location = new System.Drawing.Point(484, 97);
+            this.txtCredit.Location = new System.Drawing.Point(544, 116);
+            this.txtCredit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCredit.Name = "txtCredit";
-            this.txtCredit.Size = new System.Drawing.Size(145, 25);
+            this.txtCredit.Size = new System.Drawing.Size(163, 28);
             this.txtCredit.TabIndex = 9;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label5.Location = new System.Drawing.Point(400, 106);
+            this.label5.Location = new System.Drawing.Point(450, 127);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(71, 15);
+            this.label5.Size = new System.Drawing.Size(84, 18);
             this.label5.TabIndex = 8;
             this.label5.Text = "应得学分";
             // 
             // txttime
             // 
-            this.txttime.Location = new System.Drawing.Point(157, 94);
+            this.txttime.Location = new System.Drawing.Point(177, 113);
+            this.txttime.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txttime.Name = "txttime";
-            this.txttime.Size = new System.Drawing.Size(159, 25);
+            this.txttime.Size = new System.Drawing.Size(178, 28);
             this.txttime.TabIndex = 7;
+            this.txttime.Click += new System.EventHandler(this.txttime_Click);
+            this.txttime.CursorChanged += new System.EventHandler(this.txttime_CursorChanged);
+            this.txttime.MouseEnter += new System.EventHandler(this.txttime_MouseEnter);
+            this.txttime.MouseLeave += new System.EventHandler(this.txttime_MouseLeave);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label4.Location = new System.Drawing.Point(80, 97);
+            this.label4.Location = new System.Drawing.Point(90, 116);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(71, 15);
+            this.label4.Size = new System.Drawing.Size(84, 18);
             this.label4.TabIndex = 6;
             this.label4.Text = "获奖时间";
             // 
             // txtlevel
             // 
-            this.txtlevel.Location = new System.Drawing.Point(752, 19);
+            this.txtlevel.Location = new System.Drawing.Point(846, 23);
+            this.txtlevel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtlevel.Name = "txtlevel";
-            this.txtlevel.Size = new System.Drawing.Size(132, 25);
+            this.txtlevel.Size = new System.Drawing.Size(148, 28);
             this.txtlevel.TabIndex = 5;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label3.Location = new System.Drawing.Point(675, 25);
+            this.label3.Location = new System.Drawing.Point(759, 30);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(71, 15);
+            this.label3.Size = new System.Drawing.Size(84, 18);
             this.label3.TabIndex = 4;
             this.label3.Text = "奖项等级";
             // 
             // txtPna
             // 
-            this.txtPna.Location = new System.Drawing.Point(484, 22);
+            this.txtPna.Location = new System.Drawing.Point(544, 26);
+            this.txtPna.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPna.Name = "txtPna";
-            this.txtPna.Size = new System.Drawing.Size(141, 25);
+            this.txtPna.Size = new System.Drawing.Size(158, 28);
             this.txtPna.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label2.Location = new System.Drawing.Point(397, 29);
+            this.label2.Location = new System.Drawing.Point(447, 35);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 15);
+            this.label2.Size = new System.Drawing.Size(84, 18);
             this.label2.TabIndex = 2;
             this.label2.Text = "奖项名称";
             // 
             // txtSno
             // 
-            this.txtSno.Location = new System.Drawing.Point(155, 22);
+            this.txtSno.Location = new System.Drawing.Point(174, 26);
+            this.txtSno.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSno.Name = "txtSno";
-            this.txtSno.Size = new System.Drawing.Size(159, 25);
+            this.txtSno.Size = new System.Drawing.Size(178, 28);
             this.txtSno.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.Location = new System.Drawing.Point(94, 29);
+            this.label1.Location = new System.Drawing.Point(106, 35);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 15);
+            this.label1.Size = new System.Drawing.Size(66, 18);
             this.label1.TabIndex = 0;
             this.label1.Text = "学生ID";
             // 
@@ -240,41 +283,44 @@
             this.gvePrizeinsert.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gvePrizeinsert.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gvePrizeinsert.Location = new System.Drawing.Point(0, 0);
+            this.gvePrizeinsert.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gvePrizeinsert.Name = "gvePrizeinsert";
             this.gvePrizeinsert.RowHeadersWidth = 51;
             this.gvePrizeinsert.RowTemplate.Height = 27;
-            this.gvePrizeinsert.Size = new System.Drawing.Size(1137, 358);
+            this.gvePrizeinsert.Size = new System.Drawing.Size(1279, 430);
             this.gvePrizeinsert.TabIndex = 0;
+            this.gvePrizeinsert.CurrentCellChanged += new System.EventHandler(this.gvePrizeinsert_CurrentCellChanged);
             // 
-            // butselect
+            // button2
             // 
-            this.butselect.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.butselect.Location = new System.Drawing.Point(155, 161);
-            this.butselect.Name = "butselect";
-            this.butselect.Size = new System.Drawing.Size(204, 32);
-            this.butselect.TabIndex = 17;
-            this.butselect.Text = "输入学生ID查询结果";
-            this.butselect.UseVisualStyleBackColor = true;
-            this.butselect.Click += new System.EventHandler(this.butselect_Click);
+            this.button2.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button2.Location = new System.Drawing.Point(1118, 139);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(158, 35);
+            this.button2.TabIndex = 19;
+            this.button2.Text = "刷新";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button1
+            // label8
             // 
-            this.button1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button1.Location = new System.Drawing.Point(994, 159);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(143, 34);
-            this.button1.TabIndex = 18;
-            this.button1.Text = "取消申请";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label8.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.label8.Location = new System.Drawing.Point(161, 156);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(206, 18);
+            this.label8.TabIndex = 20;
+            this.label8.Text = "注：输入格式为年-月-日";
             // 
             // 学生评优评先表信息录入
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1137, 550);
+            this.ClientSize = new System.Drawing.Size(1279, 660);
             this.Controls.Add(this.splitContainer1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "学生评优评先表信息录入";
             this.Text = "学生评优评先信息录入";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -311,5 +357,7 @@
         private System.Windows.Forms.Button butupdate;
         private System.Windows.Forms.Button butselect;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label8;
     }
 }

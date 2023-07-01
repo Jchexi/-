@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(teacher3));
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.button1 = new System.Windows.Forms.Button();
             this.txtSname = new System.Windows.Forms.TextBox();
             this.txtSnomber = new System.Windows.Forms.TextBox();
             this.butNpass = new System.Windows.Forms.Button();
@@ -55,6 +56,7 @@
             // splitContainer2.Panel1
             // 
             this.splitContainer2.Panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.splitContainer2.Panel1.Controls.Add(this.button1);
             this.splitContainer2.Panel1.Controls.Add(this.txtSname);
             this.splitContainer2.Panel1.Controls.Add(this.txtSnomber);
             this.splitContainer2.Panel1.Controls.Add(this.butNpass);
@@ -62,6 +64,7 @@
             this.splitContainer2.Panel1.Controls.Add(this.label3);
             this.splitContainer2.Panel1.Controls.Add(this.butselsct);
             this.splitContainer2.Panel1.Controls.Add(this.label2);
+            this.splitContainer2.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer2_Panel1_Paint);
             // 
             // splitContainer2.Panel2
             // 
@@ -70,18 +73,29 @@
             this.splitContainer2.SplitterDistance = 138;
             this.splitContainer2.TabIndex = 0;
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button1.Location = new System.Drawing.Point(721, 104);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(85, 31);
+            this.button1.TabIndex = 18;
+            this.button1.Text = "刷新";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // txtSname
             // 
             this.txtSname.Location = new System.Drawing.Point(423, 22);
             this.txtSname.Name = "txtSname";
-            this.txtSname.Size = new System.Drawing.Size(130, 25);
+            this.txtSname.Size = new System.Drawing.Size(130, 28);
             this.txtSname.TabIndex = 6;
             // 
             // txtSnomber
             // 
             this.txtSnomber.Location = new System.Drawing.Point(159, 22);
             this.txtSnomber.Name = "txtSnomber";
-            this.txtSnomber.Size = new System.Drawing.Size(131, 25);
+            this.txtSnomber.Size = new System.Drawing.Size(131, 28);
             this.txtSnomber.TabIndex = 5;
             // 
             // butNpass
@@ -112,7 +126,7 @@
             this.label3.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label3.Location = new System.Drawing.Point(346, 27);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(71, 15);
+            this.label3.Size = new System.Drawing.Size(84, 18);
             this.label3.TabIndex = 2;
             this.label3.Text = "学生姓名";
             // 
@@ -133,7 +147,7 @@
             this.label2.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label2.Location = new System.Drawing.Point(98, 27);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 15);
+            this.label2.Size = new System.Drawing.Size(66, 18);
             this.label2.TabIndex = 0;
             this.label2.Text = "学生ID";
             // 
@@ -187,5 +201,6 @@
         private System.Windows.Forms.Button butselsct;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView gveaprize;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -72,8 +72,8 @@ namespace 数据库大作业
         {
             using (SqlConnection con = new SqlConnection(strCon))
             {
-                string strCmd = "select * from 评优评先表 where 学生ID = {0}";
-                strCmd = string.Format(strCmd, txtSnomber.Text);
+                string strCmd = "select * from 评优评先表 where 学生ID = '{0}' or 学生姓名='{1}'";
+                strCmd = string.Format(strCmd, txtSnomber.Text,txtSname.Text);
                 SqlDataAdapter da = new SqlDataAdapter(strCmd, con);
                 DataSet ds = new DataSet();
                 da.Fill(ds);
@@ -87,11 +87,13 @@ namespace 数据库大作业
             using (SqlConnection con = new SqlConnection(strCon))
             {
                 string 学生ID = gveaprize.CurrentRow.Cells["学生ID"].Value.ToString();
+                string 获奖时间 = gveaprize.CurrentRow.Cells["获奖时间"].Value.ToString();
+                string 奖项名称 = gveaprize.CurrentRow.Cells["奖项名称"].Value.ToString();
                 con.Open();
                 if (con.State == ConnectionState.Open)
                 {
-                    string strCmd = "update 评优评先表 set 审核是否通过='{0}'  ";
-                    strCmd = string.Format(strCmd, butpasss.Text ,学生ID);
+                    string strCmd = "update 评优评先表 set 审核是否通过='{0}' where 学生ID='{1}' AND 获奖时间='{2}' and 奖项名称='{3}' ";
+                    strCmd = string.Format(strCmd, butpasss.Text ,学生ID, 获奖时间,奖项名称);
 
                     SqlCommand command = new SqlCommand(strCmd, con);
                     command.ExecuteNonQuery();
@@ -105,17 +107,29 @@ namespace 数据库大作业
             using (SqlConnection con = new SqlConnection(strCon))
             {
                 string 学生ID = gveaprize.CurrentRow.Cells["学生ID"].Value.ToString();
+                string 获奖时间 = gveaprize.CurrentRow.Cells["获奖时间"].Value.ToString();
+                string 奖项名称 = gveaprize.CurrentRow.Cells["奖项名称"].Value.ToString();
                 con.Open();
                 if (con.State == ConnectionState.Open)
                 {
-                    string strCmd = "update 评优评先表 set 审核是否通过='{0}'";
-                    strCmd = string.Format(strCmd, butNpass.Text, 学生ID );
+                    string strCmd = "update 评优评先表 set 审核是否通过='{0}' where 学生ID='{1}' AND 获奖时间='{2}' and 奖项名称='{3}'";
+                    strCmd = string.Format(strCmd, butNpass.Text, 学生ID, 获奖时间,奖项名称);
 
                     SqlCommand command = new SqlCommand(strCmd, con);
                     command.ExecuteNonQuery();
                     InitPrize();
                 }
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            InitPrize();
+        }
+
+        private void splitContainer2_Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
