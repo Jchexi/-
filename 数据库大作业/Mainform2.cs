@@ -25,7 +25,7 @@ namespace 数据库大作业
 
         private void Mainform2_Load(object sender, EventArgs e)
         {
-            txtUserName.Text = "当前用户:"+AppConfig.UserName;
+            txtUserName.Text = "当前用户:" + AppConfig.UserName;
         }
 
         private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
@@ -40,12 +40,25 @@ namespace 数据库大作业
 
         private void toolStripTextBox5_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void toolStripButton4_Click(object sender, EventArgs e)
         {
             new 学生评优评先表信息录入().Show();
+        }
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            new 成绩查询().Show();
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            new 课程查询().Show();
+        }
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+            new students_credit().Show();
         }
 
         private void toolStripButton3_Click(object sender, EventArgs e)

@@ -49,6 +49,8 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnInsert = new System.Windows.Forms.Button();
             this.gvescore = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtcredit = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -66,6 +68,9 @@
             // 
             // splitContainer1.Panel1
             // 
+
+            this.splitContainer1.Panel1.Controls.Add(this.txtcredit);
+            this.splitContainer1.Panel1.Controls.Add(this.label1);
             this.splitContainer1.Panel1.Controls.Add(this.button1);
             this.splitContainer1.Panel1.Controls.Add(this.btnStatistic);
             this.splitContainer1.Panel1.Controls.Add(this.txtGradedrop);
@@ -89,9 +94,8 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.gvescore);
-            this.splitContainer1.Size = new System.Drawing.Size(1096, 578);
-            this.splitContainer1.SplitterDistance = 171;
-            this.splitContainer1.SplitterWidth = 5;
+            this.splitContainer1.Size = new System.Drawing.Size(1025, 482);
+            this.splitContainer1.SplitterDistance = 143;
             this.splitContainer1.TabIndex = 0;
             // 
             // button1
@@ -119,8 +123,7 @@
             // 
             // txtGradedrop
             // 
-            this.txtGradedrop.Location = new System.Drawing.Point(723, 59);
-            this.txtGradedrop.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtGradedrop.Location = new System.Drawing.Point(643, 47);
             this.txtGradedrop.Name = "txtGradedrop";
             this.txtGradedrop.Size = new System.Drawing.Size(156, 28);
             this.txtGradedrop.TabIndex = 15;
@@ -135,8 +138,7 @@
             // 
             // txtMark
             // 
-            this.txtMark.Location = new System.Drawing.Point(354, 62);
-            this.txtMark.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtMark.Location = new System.Drawing.Point(315, 52);
             this.txtMark.Name = "txtMark";
             this.txtMark.Size = new System.Drawing.Size(162, 28);
             this.txtMark.TabIndex = 13;
@@ -144,8 +146,7 @@
             // 
             // txtCname
             // 
-            this.txtCname.Location = new System.Drawing.Point(69, 59);
-            this.txtCname.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtCname.Location = new System.Drawing.Point(61, 49);
             this.txtCname.Name = "txtCname";
             this.txtCname.Size = new System.Drawing.Size(174, 28);
             this.txtCname.TabIndex = 12;
@@ -154,7 +155,7 @@
             // 
             this.GradeDrop.AutoSize = true;
             this.GradeDrop.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.GradeDrop.Location = new System.Drawing.Point(642, 66);
+            this.GradeDrop.Location = new System.Drawing.Point(571, 55);
             this.GradeDrop.Name = "GradeDrop";
             this.GradeDrop.Size = new System.Drawing.Size(46, 18);
             this.GradeDrop.TabIndex = 11;
@@ -286,15 +287,32 @@
             this.gvescore.Name = "gvescore";
             this.gvescore.RowHeadersWidth = 51;
             this.gvescore.RowTemplate.Height = 27;
-            this.gvescore.Size = new System.Drawing.Size(1096, 400);
+            this.gvescore.Size = new System.Drawing.Size(985, 335);
             this.gvescore.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label1.Location = new System.Drawing.Point(821, 52);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(39, 15);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "学分";
+            // 
+            // txtcredit
+            // 
+            this.txtcredit.Location = new System.Drawing.Point(882, 47);
+            this.txtcredit.Name = "txtcredit";
+            this.txtcredit.Size = new System.Drawing.Size(133, 25);
+            this.txtcredit.TabIndex = 18;
             // 
             // teacher1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1096, 578);
+            this.ClientSize = new System.Drawing.Size(1025, 482);
             this.Controls.Add(this.splitContainer1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -334,5 +352,7 @@
         private System.Windows.Forms.Button btnInsert;
         private System.Windows.Forms.DataGridView gvescore;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txtcredit;
+        private System.Windows.Forms.Label label1;
     }
 }
